@@ -80,42 +80,43 @@ export default defineConfig({
 					{
 						id: 'java',
 						label: 'Java',
-						link: '/JAVA/Vanilla/',
+						link: '/java/vanilla/',
 						icon: '/assets/ronglu.webp',
 						badge: { text: '推荐', variant: 'success' },
 						items: [
 							{
 								label: 'Vanilla(原版)',
 								items: [
-									{ label: '前言', link: '/JAVA/Vanilla/' },
-									{ label: '快速开始', link: '/JAVA/Vanilla/QuickStart' },
+									{ label: '前言', link: '/java/vanilla/' },
+									{ label: '快速开始', link: '/java/vanilla/quickstart/' },
 									{
 										label: '进阶',
 										items: [
-											{ label: '配置文件', link: '/JAVA/Vanilla/Advanced/config' },
+											{ label: '配置文件', link: '/java/vanilla/advanced/config/' },
 										],
 									},
-									{ label: '常见问题', link: '/JAVA/Vanilla/FAQ' },
+									{ label: '常见问题', link: '/java/vanilla/faq/' },
+									{ label: 'FAQ_Ask', link: '/java/vanilla/faq_ask/' },
 								],
 							},
 							{
 								label: 'Mod 服',
 								items: [
-									{ label: '前言', link: '/JAVA/Mod/' },
+									{ label: '前言', link: '/java/mod/' },
 									{
 										label: 'Forge / NeoForge',
 										items: [
-											{ label: '开服教程', link: '/JAVA/Mod/Forge_NeoForge/' },
-											{ label: '常见问题', link: '/JAVA/Mod/Forge_NeoForge/FAQ' },
+											{ label: '开服教程', link: '/java/mod/forge_neoforge/' },
+											{ label: '常见问题', link: '/java/mod/forge_neoforge/faq/' },
 										],
 									},
 									{
 										label: 'Fabric / Quilt',
 										items: [
-											{ label: '快速开始', link: '/JAVA/Mod/Farbic_Quilt/QuickStart' },
-											{ label: '进阶', link: '/JAVA/Mod/Farbic_Quilt/Advanced' },
-											{ label: '常见问题', link: '/JAVA/Mod/Farbic_Quilt/FAQ' },
-											{ label: '注意事项', link: '/JAVA/Mod/Farbic_Quilt/Note' },
+											{ label: '快速开始', link: '/java/mod/farbic_quilt/quickstart/' },
+											{ label: '进阶', link: '/java/mod/farbic_quilt/advanced/' },
+											{ label: '常见问题', link: '/java/mod/farbic_quilt/faq/' },
+											{ label: '注意事项', link: '/java/mod/farbic_quilt/note/' },
 										],
 									},
 								],
@@ -123,80 +124,80 @@ export default defineConfig({
 							{
 								label: 'Sponge',
 								items: [
-									{ label: '前言', link: '/JAVA/Sponge/' },
-									{ label: 'SpongeForge', link: '/JAVA/Sponge/SpongeForge/' },
-									{ label: 'SpongeVanilla', link: '/JAVA/Sponge/SpongeVanilla/' },
+									{ label: '前言', link: '/java/sponge/' },
+									{ label: 'SpongeForge', link: '/java/sponge/spongeforge/' },
+									{ label: 'SpongeVanilla', link: '/java/sponge/spongevanilla/' },
 								],
 							},
 							{
 								label: 'Spigot系',
 								items: [
-									{ label: '前言', link: '/JAVA/SpigotSeries/' },
+									{ label: '前言', link: '/java/spigotseries/' },
 									{
 										label: '开服教程',
 										items: [
-											{ label: '快速开始', link: '/JAVA/SpigotSeries/QuickStart' },
-											{ label: '进阶', link: '/JAVA/SpigotSeries/Advanced' },
+											{ label: '快速开始', link: '/java/spigotseries/quickstart/' },
+											{ label: '进阶', link: '/java/spigotseries/advanced/' },
 										],
 									},
-									{ label: '常见问题', link: '/JAVA/SpigotSeries/FAQ' },
+									{ label: '常见问题', link: '/java/spigotseries/faq/' },
 								],
 							},
 							{
 								label: 'Cuberite',
 								items: [
-									{ label: '前言', link: '/JAVA/Cuberite/' },
+									{ label: '前言', link: '/java/cuberite/' },
 									{
 										label: '简介',
 										items: [
-											{ label: '介绍', link: '/JAVA/Cuberite/0_INTRODUCTION/0_1_Introduction' },
-											{ label: '什么是 Cuberite', link: '/JAVA/Cuberite/0_INTRODUCTION/0_2_What_is_Cuberite' },
-											{ label: '历史', link: '/JAVA/Cuberite/0_INTRODUCTION/0_3_History' },
+											{ label: '介绍', link: '/java/cuberite/0_introduction/0_1_introduction/' },
+											{ label: '什么是 Cuberite', link: '/java/cuberite/0_introduction/0_2_what_is_cuberite/' },
+											{ label: '历史', link: '/java/cuberite/0_introduction/0_3_history/' },
 										],
 									},
 									{
 										label: '安装',
 										items: [
-											{ label: '预编译版本', link: '/JAVA/Cuberite/1_INSTALLING/1_1_Pre-Compiled_Builds' },
-											{ label: '自行编译', link: '/JAVA/Cuberite/1_INSTALLING/1_2_Compiling_Cuberite_Yourself' },
-											{ label: '运行 Cuberite', link: '/JAVA/Cuberite/1_INSTALLING/1_3_Running_Cuberite' },
+											{ label: '预编译版本', link: '/java/cuberite/1_installing/1_1_pre-compiled_builds/' },
+											{ label: '自行编译', link: '/java/cuberite/1_installing/1_2_compiling_cuberite_yourself/' },
+											{ label: '运行 Cuberite', link: '/java/cuberite/1_installing/1_3_running_cuberite/' },
 										],
 									},
 									{
 										label: '基础配置',
 										items: [
-											{ label: '配置概述', link: '/JAVA/Cuberite/2_CONFIGURATION_BASICS/2_1_CONFIGURATION_OVERVIEW' },
-											{ label: '权限', link: '/JAVA/Cuberite/2_CONFIGURATION_BASICS/2_2_PERMISSIONS' },
-											{ label: 'WebAdmin', link: '/JAVA/Cuberite/2_CONFIGURATION_BASICS/2_3_WEBADMIN' },
-											{ label: '世界', link: '/JAVA/Cuberite/2_CONFIGURATION_BASICS/2_4_WORLDS' },
-											{ label: '插件', link: '/JAVA/Cuberite/2_CONFIGURATION_BASICS/2_5_PLUGINS' },
+											{ label: '配置概述', link: '/java/cuberite/2_configuration_basics/2_1_configuration_overview/' },
+											{ label: '权限', link: '/java/cuberite/2_configuration_basics/2_2_permissions/' },
+											{ label: 'WebAdmin', link: '/java/cuberite/2_configuration_basics/2_3_webadmin/' },
+											{ label: '世界', link: '/java/cuberite/2_configuration_basics/2_4_worlds/' },
+											{ label: '插件', link: '/java/cuberite/2_configuration_basics/2_5_plugins/' },
 										],
 									},
 									{
 										label: '配置 world.ini',
 										items: [
-											{ label: '什么是 world.ini', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_1_What_is_world-ini' },
+											{ label: '什么是 world.ini', link: '/java/cuberite/3_configuring_world_ini/3_1_what_is_world-ini/' },
 											{
 												label: '配置详解',
 												items: [
-													{ label: 'General', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_2_General' },
-													{ label: 'Broadcasting', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_3_Broadcasting' },
-													{ label: 'SpawnPosition', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_4_SpawnPosition' },
-													{ label: 'Storage', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_5_Storage' },
-													{ label: 'Plants', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_6_Plants' },
-													{ label: 'Physics', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_7_Physics' },
-													{ label: 'Mechanics', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_8_Mechanics' },
-													{ label: 'Monsters', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_9_Monsters' },
-													{ label: 'Weather', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_10_Weather' },
-													{ label: 'Generator', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_11_Generator' },
-													{ label: 'Other', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_12_Other' },
-													{ label: '示例配置', link: '/JAVA/Cuberite/3_CONFIGURING_WORLD_INI/3_13_Example_Configurations' },
+													{ label: 'General', link: '/java/cuberite/3_configuring_world_ini/3_2_general/' },
+													{ label: 'Broadcasting', link: '/java/cuberite/3_configuring_world_ini/3_3_broadcasting/' },
+													{ label: 'SpawnPosition', link: '/java/cuberite/3_configuring_world_ini/3_4_spawnposition/' },
+													{ label: 'Storage', link: '/java/cuberite/3_configuring_world_ini/3_5_storage/' },
+													{ label: 'Plants', link: '/java/cuberite/3_configuring_world_ini/3_6_plants/' },
+													{ label: 'Physics', link: '/java/cuberite/3_configuring_world_ini/3_7_physics/' },
+													{ label: 'Mechanics', link: '/java/cuberite/3_configuring_world_ini/3_8_mechanics/' },
+													{ label: 'Monsters', link: '/java/cuberite/3_configuring_world_ini/3_9_monsters/' },
+													{ label: 'Weather', link: '/java/cuberite/3_configuring_world_ini/3_10_weather/' },
+													{ label: 'Generator', link: '/java/cuberite/3_configuring_world_ini/3_11_generator/' },
+													{ label: 'Other', link: '/java/cuberite/3_configuring_world_ini/3_12_other/' },
+													{ label: '示例配置', link: '/java/cuberite/3_configuring_world_ini/3_13_example_configurations/' },
 												],
 											},
 										],
 									},
-									{ label: '多世界', link: '/JAVA/Cuberite/4_MULTIWORLDS/' },
-									{ label: '常见问题', link: '/JAVA/Cuberite/FAQ' },
+									{ label: '多世界', link: '/java/cuberite/4_multiworlds/' },
+									{ label: '常见问题', link: '/java/cuberite/faq/' },
 								],
 							},
 						],
@@ -204,21 +205,21 @@ export default defineConfig({
 					{
 						id: 'bedrock',
 						label: '基岩',
-						link: '/Bedrock/BDS/',
+						link: '/bedrock/bds/',
 						icon: '/assets/jiyan.webp',
 						items: [
 							{
 								label: 'BDS（原版）',
 								items: [
-									{ label: '前言', link: '/Bedrock/BDS/' },
-									{ label: '快速开始', link: '/Bedrock/BDS/QuickStart' },
+									{ label: '前言', link: '/bedrock/bds/' },
+									{ label: '快速开始', link: '/bedrock/bds/quickstart/' },
 									{
 										label: '进阶',
 										items: [
-											{ label: '配置文件', link: '/Bedrock/BDS/Advanced/config' },
+											{ label: '配置文件', link: '/bedrock/bds/advanced/config/' },
 										],
 									},
-									{ label: '常见问题', link: '/Bedrock/BDS/FAQ' },
+									{ label: '常见问题', link: '/bedrock/bds/faq/' },
 								],
 							},
 						],
@@ -226,20 +227,20 @@ export default defineConfig({
 					{
 						id: 'extra',
 						label: '番外篇',
-						link: '/Extra/',
+						link: '/extra/',
 						icon: '/assets/chalkboard.webp',
 						items: [
-							{ label: '番外篇', link: '/Extra/' },
-							{ label: '如何贡献', link: '/Contribute/' },
+							{ label: '番外篇', link: '/extra/' },
+							{ label: '如何贡献', link: '/contribute/' },
 						],
 					},
 					{
 						id: 'progress',
 						label: '编写进度',
 						icon: 'pencil',
-						link: '/Progress',
+						link: '/progress/',
 						items: [
-							{ label: '编写进度', link: '/Progress' },
+							{ label: '编写进度', link: '/progress/' },
 						],
 					},
 				], {
