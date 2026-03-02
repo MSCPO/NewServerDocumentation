@@ -1,0 +1,147 @@
+# 鸣谢：https://www.minebbs.com/threads/bedrock-dedicated-server-server-properties.32021/
+
+
+server-name:
+  default: "Dedicated Server"
+  description: "服务器的名称/Motd，允许填除了;之外的任何字符(填了会清掉)"
+gamemode:
+  default: "survival"
+  description: "玩家默认游戏模式,允许填以下值(乱填为creative):<br>survival,s,0: 生存模式<br>creative,c,1: 创造模式<br>adventure,a,2: 冒险模式<br>spectator: 旁观者模式"
+force-gamemode:
+  default: "false"
+  description: "强制玩家游戏模式为默认游戏模式<br>也就是说开启后,玩家每次进服,游戏模式都会更新为默认游戏模式"
+difficulty:
+  default: "easy"
+  description: "世界的游戏难度,允许填以下值(乱填为easy):<br>peaceful,0: 和平模式<br>easy,1: 简单模式<br>normal,2: 正常模式<br>hard,3: 困难模式"
+allow-cheats:
+  default: "false"
+  description: "是否启用作弊"
+max-players:
+  default: "10"
+  description: "服务器最大玩家数(乱填为0)"
+online-mode:
+  default: "true"
+  description: "是否启用xbox账号验证(强烈建议开启)"
+allow-list:
+  default: "false"
+  description: "是否开启白名单"
+server-port:
+  default: "19132"
+  description: "服务器的IPv4端口,允许填0~65535之间的任意整数(乱填为0)"
+server-portv6:
+  default: "19133"
+  description: "服务器的IPv6端口,允许填0~65535之间的任意整数(乱填为0)"
+enable-lan-visibility:
+  default: "true"
+  description: "局域网是否显示服务器"
+view-distance:
+  default: "32"
+  description: "最大可视距离,以区块为单位,允许填5~2147483647之间的任意整数(乱填为5)"
+tick-distance:
+  default: "4"
+  description: "加载区块范围,范围4~12(乱填为4)"
+player-idle-timeout:
+  default: "30"
+  description: "挂机多久后会被踢,0为关闭,单位分钟<br>允许填0~2147483647之间的任意整数(乱填为0)"
+max-threads:
+  default: "8"
+  description: "服务器最大线程,0为不限制<br>允许填0~2147483647之间的任意整数(乱填为0)"
+level-name:
+  default: "Bedrock level"
+  description: "服务器存档名称,不可以填非法的目录名<br>如:/\\n\\r\\t\\f`?*\\\\<>|\":<br>非法字符填了会清掉,如果为为空会直接把存档丢 ./worlds 目录,而不是 ./worlds/存档名 目录"
+level-seed:
+  default: ""
+  description: "存档种子号,留空随机"
+default-player-permission-level:
+  default: "member"
+  description: "玩家默认权限等级,允许填以下值(乱填为member):<br>visitor: 游客<br>member: 玩家<br>operator: 管理员"
+texturepack-required:
+  default: "false"
+  description: "强制客户端使用服务端的材质包"
+content-log-file-enabled:
+  default: "false"
+  description: "报错内容写入到日志文件"
+compression-threshold:
+  default: "1"
+  description: "确定要压缩的原始网络有效负载的最小大小<br>范围0-65535,乱填为0"
+compression-algorithm:
+  default: "zlib"
+  description: "网络压缩算法,可填以下值(乱填为zlib):<br>zlib: 压缩率更高<br>snappy: 读取性能高"
+server-authoritative-movement:
+  default: "server-auth"
+  description: "服务端移动鉴权,允许填以下值:<br>client-auth: 不管(可能出现客户端和服务端位置不同步)<br>server-auth: 也是不管<br>server-auth-with-rewind: 玩家移动有问题直接修正"
+player-position-acceptance-threshold:
+  default: "0.5"
+  description: "和\"server-auth-with-rewind\"一起使用,表示对客户端移动的容忍度(防止过于频繁地更正)"
+player-movement-action-direction-threshold:
+  default: "0.85"
+  description: "玩家攻击方向和视线方向的最大差值(0~1)"
+server-authoritative-block-breaking:
+  default: "false"
+  description: "客户端挖掘鉴权"
+server-authoritative-block-breaking-pick-range-scalar:
+  default: "1.5"
+  description: "服务器鉴权区块选取范围标量"
+chat-restriction:
+  default: "None"
+  description: "聊天限制,允许填以下值:<br>None: 正常聊天<br>Dropped: 玩家不允许聊天<br>Disabled: 除非玩家是管理员,否则聊天UI不会出现,玩家不会收到任何信息"
+disable-player-interaction:
+  default: "false"
+  description: "服务器将通知客户端在与世界交互时忽略其他玩家"
+client-side-chunk-generation-enabled:
+  default: "true"
+  description: "客户端区块预加载"
+block-network-ids-are-hashes:
+  default: "true"
+  description: "异步发送区块数据包"
+disable-persona:
+  default: "false"
+  description: "内部使用,开启没效果"
+disable-custom-skins:
+  default: "false"
+  description: "禁用玩家自定义皮肤"
+server-build-radius-ratio:
+  default: "Disabled"
+  description: "客户端生成区块比例,可填Disabled(禁用)或0.1~1.0之间的任意浮点数<br>禁用则服务端会动态的告诉客户端要生成多大范围<br>否则,从覆盖比率告诉服务器要生成多少玩家视图,而不考虑客户端硬件能力"
+allow-outbound-script-debugging:
+  default: "false"
+  description: "允许脚本调试\"connect\"命令和 script-debugger-auto-attach=connect 模式"
+allow-inbound-script-debugging:
+  default: "false"
+  description: "允许脚本调试\"listen\"命令和 script-debugger-auto-attach=listen 模式"
+force-inbound-debug-port:
+  default: "19144"
+  description: "调试器监听端口,使用 script-debugger-auto-attach=listen 模式时必须设置"
+script-debugger-auto-attach:
+  default: "disabled"
+  description: "尝试在存档加载时附加脚本调试器<br>disabled: 禁用<br>connect: 以监听模式连接调试器<br>listen: 以连接模式监听调试器连接尝试"
+script-debugger-auto-attach-connect-address:
+  default: "localhost:19144"
+  description: "脚本调试器自动连接地址。script-debugger-auto-attach=connect 模式时必须设置"
+script-watchdog-enable:
+  default: "true"
+  description: "启用脚本调试器看门狗"
+script-watchdog-enable-exception-handling:
+  default: "true"
+  description: "通过 events.beforeWatchdogTerminate 事件启用看门狗异常处理"
+script-watchdog-enable-shutdown:
+  default: "true"
+  description: "在看门狗异常未处理的情况下关闭服务器"
+script-watchdog-hang-exception:
+  default: "true"
+  description: "当出现挂起时抛出临界异常,中断脚本的执行"
+script-watchdog-hang-threshold:
+  default: "10000"
+  description: "设置单次挂起的看门狗阈值"
+script-watchdog-spike-threshold:
+  default: "100"
+  description: "设置看门狗的单刻度尖峰阈值"
+script-watchdog-slow-threshold:
+  default: "10"
+  description: "为多个 ticks 的慢速脚本设置 wachdog 临界值"
+script-watchdog-memory-warning:
+  default: "100"
+  description: "当综合内存使用量超过给定阈值(以MB为单位,最大2000)时,发出内容日志警告"
+script-watchdog-memory-limit:
+  default: "250"
+  description: "当脚本内存使用量超过给定的阈值(以MB为单位,最大2000)时,保存并关闭世界"
