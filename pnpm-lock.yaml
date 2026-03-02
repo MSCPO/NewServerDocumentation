@@ -29,6 +29,9 @@ importers:
       astro:
         specifier: ^6.3.1
         version: 6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)
+      astro-contributors:
+        specifier: ^0.8.0
+        version: 0.8.0(astro@6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0))
       astro-vtbot:
         specifier: ^2.1.12
         version: 2.1.12
@@ -41,9 +44,6 @@ importers:
       starlight-announcement:
         specifier: ^1.1.0
         version: 1.1.0(@astrojs/starlight@0.39.2(astro@6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)))
-      starlight-contributor-list:
-        specifier: ^0.4.0
-        version: 0.4.0(astro@6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0))
       starlight-heading-badges:
         specifier: ^0.7.0
         version: 0.7.0(@astrojs/starlight@0.39.2(astro@6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)))
@@ -1041,6 +1041,12 @@ packages:
   astring@1.9.0:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
+
+  astro-contributors@0.8.0:
+    resolution: {integrity: sha512-oz1sZ8K8Yq6bbLbhGV8e5C5Tif9+UB4oeREAqkQ3ehh4+e1OP03RXaAf2JkIhzEr+0et986MOHUO1iYt1wGZeQ==}
+    engines: {node: '>=22.12.0'}
+    peerDependencies:
+      astro: ^6.0.0
 
   astro-expressive-code@0.42.0:
     resolution: {integrity: sha512-aiTePi2Cn0mJPYWZSzP1GcxCinX9mNtJyCCshVVPSg1yRwM7ADvFJOx0FnS440M9t65hp8JH//dc2qr22Bm4ag==}
@@ -2328,13 +2334,6 @@ packages:
     peerDependencies:
       '@astrojs/starlight': '>=0.38.0'
 
-  starlight-contributor-list@0.4.0:
-    resolution: {integrity: sha512-iQQMGIhv8ef995UlKeTwuFC85QQBEIVjh2oXu2IszNQhFUd1cLMYwoJymhtPv7fFrrh+3ezsLAq4IRS/o7CXQg==}
-    engines: {node: '>=22.12.0'}
-    deprecated: 'This package is no longer maintained. Please upgrade to the new package: https://www.npmjs.com/package/astro-contributors'
-    peerDependencies:
-      astro: ^5.0.0
-
   starlight-heading-badges@0.7.0:
     resolution: {integrity: sha512-mzxTn7lFd2OPB6naJKYelZbu1EUGCT2hm8Ozx/9EqgGy68y7ggUGxrDmdTvpozzi5OLkijiZw8zcvdq63JdRbA==}
     engines: {node: '>=22.12.0'}
@@ -3585,6 +3584,10 @@ snapshots:
   array-iterate@2.0.1: {}
 
   astring@1.9.0: {}
+
+  astro-contributors@0.8.0(astro@6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)):
+    dependencies:
+      astro: 6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)
 
   astro-expressive-code@0.42.0(astro@6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)):
     dependencies:
@@ -5507,10 +5510,6 @@ snapshots:
     dependencies:
       '@astrojs/starlight': 0.39.2(astro@6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0))
       picomatch: 4.0.4
-
-  starlight-contributor-list@0.4.0(astro@6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)):
-    dependencies:
-      astro: 6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)
 
   starlight-heading-badges@0.7.0(@astrojs/starlight@0.39.2(astro@6.4.2(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0))):
     dependencies:
