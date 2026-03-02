@@ -1,0 +1,76 @@
+﻿---
+title: 基本知识
+---
+
+import { FileTree, LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+
+MSCPO 开服文档本着编辑友好，灵活性强，便于预览和自定义的需求采用了现代的轻量化的 [Astro Starlight](https://starlight.astro.build/) 框架。
+
+编写文档需要清楚一些基础知识
+
+- 基础知识
+  - [Markdown 是什么](#markdown-是什么)
+  - [怎么排版中文文案](#中文文案排版指北)
+
+## Markdown 是什么?
+
+> Markdown 是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与 HTML 混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。因简洁、高效、易读、易写，Markdown 被大量使用，如 Github、Wikipedia、简书等。
+
+> 千万不要被「标记」、「语言」吓到，Markdown 的语法十分简单，常用的标记符号不超过十个，用于日常写作记录绰绰有余，不到半小时就能完全掌握。
+
+> 就是这十个不到的标记符号，却能让人优雅地沉浸式记录，专注内容而不是纠结排版，达到「心中无尘，码字入神」的境界。
+
+> 摘自 [Markdown 官方教程](https://markdown.com.cn/basic-syntax/)
+
+- [Markdown 官方教程](https://markdown.com.cn/basic-syntax/)
+- [Markdown 的简单用法](https://markdown.com.cn/basic-syntax/)
+- [Starlight Markdown 指南](https://starlight.astro.build/guides/authoring-content/)
+
+## 文档体系
+
+### 结构
+
+<FileTree>
+
+- docs/
+  - public/ 资源文件夹
+    - fonts/
+      - LICENSE/
+    - Images/ 图像资源
+      - Bedrock/
+      - JAVA/
+  - src/
+    - content/
+      - docs/ 中文目录
+        - Bedrock/ 基岩服务端教程
+          - BDS/
+        - Contribute/ 贡献教程文档
+        - JAVA/ Java 服务端教程
+          - Cuberite/
+          - Mod/
+          - SpigotSeries/
+          - Sponge/
+          - Vanilla/
+
+</FileTree>
+
+## 中文文案排版指北
+
+转自 [中文文案排版指北](https://github.com/mzlogin/chinese-copywriting-guidelines)
+
+### 空格
+
+「有研究显示，打字的时候不喜欢在中文和英文之间加空格的人，感情路都走得很辛苦，有七成的比例会在 34 岁的时候跟自己不爱的人结婚，而其余三成的人最后只能把遗产留给自己的猫。毕竟爱情跟书写都需要适时的留白。
+
+与大家共勉之。」——[vinta/paranoid-auto-spacing](https://github.com/vinta/pangu.js)
+
+#### 中英文之间需要增加空格
+
+正确：
+
+> 在 LeanCloud 上，数据存储是围绕 `AVObject` 进行的。
+
+错误：
+
+> 在LeanCloud上，数据存储是围绕AVObject进行的。
