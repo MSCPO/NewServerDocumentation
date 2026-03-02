@@ -1,0 +1,56 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+---
+
+<style>
+	.mermaid-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 100px;
+		background-color: var(--sl-color-gray-6);
+		border-radius: 0.5rem;
+		margin: 1rem 0;
+		padding: 1rem;
+		border: 1px solid var(--sl-color-gray-5);
+	}
+
+	.mermaid-loading {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--sl-color-gray-3);
+		font-size: var(--sl-text-sm);
+	}
+
+	.mermaid-container pre.mermaid {
+		display: none;
+		background: transparent;
+		border: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	.mermaid-container.rendered .mermaid-loading {
+		display: none;
+	}
+
+	.mermaid-container.rendered pre.mermaid {
+		display: block;
+	}
+
+	:global(.mermaid svg) {
+		max-width: 100%;
+		height: auto;
+	}
+</style>
+
+<div class="mermaid-container">
+	<div class="mermaid-loading">
+		<Icon name="document" size="1.5rem" />
+		<span>组件加载中...</span>
+	</div>
+	<pre class="mermaid"><slot /></pre>
+</div>

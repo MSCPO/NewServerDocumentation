@@ -1,0 +1,58 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<Default><slot /></Default>
+
+<div class="custom-footer-license">
+  <p class="license-text">
+    本作品采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans" target="_blank" rel="noopener noreferrer">知识共享署名-相同方式共享 4.0 国际许可协议 (CC BY-SA 4.0)</a> 进行许可
+  </p>
+  <p class="disclaimer-text">
+    文档中所提及的品牌、组织、项目等名称仅作标识性引用，不代表其官方立场或认可。如有任何意见或建议，请及时与我们联系。
+  </p>
+</div>
+
+<style>
+  .custom-footer-license {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--sl-color-hairline-light);
+    text-align: center;
+    font-size: var(--sl-text-xs);
+    line-height: 1.6;
+    color: var(--sl-color-gray-3);
+  }
+
+  [data-theme='light'] .custom-footer-license {
+    color: var(--sl-color-gray-4);
+  }
+
+  .license-text {
+    margin: 0.25rem 0;
+  }
+
+  .license-text a {
+    color: var(--sl-color-accent-high);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .license-text a:hover {
+    color: var(--sl-color-accent);
+  }
+
+  [data-theme='light'] .license-text a {
+    color: var(--sl-color-accent);
+  }
+
+  [data-theme='light'] .license-text a:hover {
+    color: var(--sl-color-accent-low);
+  }
+
+  .disclaimer-text {
+    margin: 0.5rem 0 0.25rem;
+    font-style: italic;
+    opacity: 0.8;
+  }
+</style>

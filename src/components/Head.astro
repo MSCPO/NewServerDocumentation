@@ -1,0 +1,73 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+import { ClientRouter } from 'astro:transitions';
+---
+
+<Default {...Astro.props}><slot /></Default>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&text=%E5%9C%A8%E8%BF%99%E9%87%8C%E5%BC%80%E5%A7%8B&display=swap" rel="stylesheet" />
+
+<script is:inline>
+  function markActive() {
+    var current = window.location.pathname.replace(/\/$/, '');
+    document.querySelectorAll('#starlight__sidebar a[href]').forEach(function (a) {
+      var href = (a.getAttribute('href') || '').replace(/\/$/, '');
+      if (href === current) {
+        a.setAttribute('aria-current', 'page');
+      } else {
+        a.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  let savedSidebarScroll = 0;
+
+  document.addEventListener('astro:before-swap', function () {
+    var sidebar = document.querySelector('.sidebar-pane');
+    if (sidebar) {
+      savedSidebarScroll = sidebar.scrollTop;
+    }
+  });
+
+  document.addEventListener('astro:after-swap', function () {
+    markActive();
+    var sidebar = document.querySelector('.sidebar-pane');
+    if (sidebar) {
+      sidebar.scrollTop = savedSidebarScroll;
+    }
+  });
+
+  document.addEventListener('astro:page-load', function () {
+    markActive();
+    var sidebar = document.querySelector('.sidebar-pane');
+    if (sidebar) {
+      sidebar.scrollTop = savedSidebarScroll;
+    }
+  });
+
+  markActive();
+</script>
+
+<script is:inline>
+  (function () {
+    function ensureBackdrop() {
+      if (document.getElementById('sidebar-backdrop') || !document.body) return;
+      var bd = document.createElement('div');
+      bd.id = 'sidebar-backdrop';
+      document.body.appendChild(bd);
+      bd.addEventListener('click', function () {
+        var toggle = document.querySelector('starlight-menu-button');
+        if (toggle) { var btn = toggle.querySelector('button'); if (btn) btn.click(); }
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', ensureBackdrop);
+    } else {
+      ensureBackdrop();
+    }
+    document.addEventListener('astro:page-load', ensureBackdrop);
+  })();
+</script>
+
+<ClientRouter fallback="animate" />

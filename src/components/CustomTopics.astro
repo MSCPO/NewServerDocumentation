@@ -1,0 +1,219 @@
+---
+import { Badge, Icon } from '@astrojs/starlight/components'
+
+const locals = Astro.locals as any
+const { topics } = locals.starlightSidebarTopics
+
+const isImagePath = (icon: string) => {
+  return icon.includes('/') || icon.includes('\\') || icon.endsWith('.svg') || icon.endsWith('.png') || icon.endsWith('.jpg') || icon.endsWith('.webp')
+}
+---
+
+<div class="topics-container">
+  <div class="topics-track">
+    <div class="topics-indicator" aria-hidden="true"></div>
+    <ul class="starlight-sidebar-topics">
+      {
+        topics.map((topic: any) => (
+          <li>
+            <a href={topic.link} class:list={{ 'starlight-sidebar-topics-current': topic.isCurrent }}>
+              {topic.icon && (
+                <div class="starlight-sidebar-topics-icon">
+                  {isImagePath(topic.icon) ? (
+                    <img src={topic.icon} alt="" class="starlight-sidebar-topics-image" />
+                  ) : (
+                    <Icon name={topic.icon} />
+                  )}
+                </div>
+              )}
+              <span class="topic-label">
+                {topic.label}
+                {topic.badge && (
+                  <Badge class="starlight-sidebar-topics-badge" text={topic.badge.text} variant={topic.badge.variant} />
+                )}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="topics-divider"></div>
+</div>
+
+<script>
+  function initTopicsIndicator() {
+    const container = document.querySelector('.topics-container');
+    if (!container) return;
+
+    const indicator = container.querySelector('.topics-indicator') as HTMLElement;
+    const current = container.querySelector('.starlight-sidebar-topics-current') as HTMLElement;
+    if (!indicator || !current) {
+      if (indicator) indicator.style.opacity = '0';
+      return;
+    }
+
+    const track = container.querySelector('.topics-track') as HTMLElement;
+    if (!track) return;
+
+    const trackRect = track.getBoundingClientRect();
+    const elRect = current.getBoundingClientRect();
+    const targetTop = elRect.top - trackRect.top;
+    const targetHeight = elRect.height;
+
+    const prevRaw = sessionStorage.getItem('topic-indicator-state');
+    let prevTop = targetTop;
+    let prevHeight = targetHeight;
+    let hasPrev = false;
+
+    if (prevRaw) {
+      try {
+        const prev = JSON.parse(prevRaw);
+        if (typeof prev.top === 'number' && typeof prev.height === 'number') {
+          prevTop = prev.top;
+          prevHeight = prev.height;
+          hasPrev = true;
+        }
+      } catch {}
+    }
+
+    sessionStorage.setItem('topic-indicator-state', JSON.stringify({ top: targetTop, height: targetHeight }));
+
+    if (hasPrev && Math.abs(prevTop - targetTop) > 1) {
+      indicator.style.transition = 'none';
+      indicator.style.transform = `translateY(${prevTop}px)`;
+      indicator.style.height = `${prevHeight}px`;
+      indicator.style.opacity = '1';
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          indicator.style.transition = 'transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+          indicator.style.transform = `translateY(${targetTop}px)`;
+          indicator.style.height = `${targetHeight}px`;
+        });
+      });
+    } else {
+      indicator.style.transition = 'none';
+      indicator.style.transform = `translateY(${targetTop}px)`;
+      indicator.style.height = `${targetHeight}px`;
+      indicator.style.opacity = '1';
+
+      requestAnimationFrame(() => {
+        indicator.style.transition = 'transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+      });
+    }
+  }
+
+  initTopicsIndicator();
+  document.addEventListener('astro:page-load', initTopicsIndicator);
+</script>
+
+<style>
+  .topics-container {
+    position: relative;
+  }
+
+  .topics-divider {
+    height: 1px;
+    background: var(--sl-color-hairline-light);
+    margin-top: 0.5rem;
+  }
+
+  .topics-track {
+    position: relative;
+  }
+
+  .topics-indicator {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-radius: 0.5rem;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    background-color: var(--sl-color-accent-low);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  }
+
+  :global([data-theme='light']) .topics-indicator {
+    background-color: color-mix(in srgb, var(--sl-color-accent) 10%, transparent);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  li {
+    overflow-wrap: anywhere;
+  }
+
+  li + li {
+    margin-top: 2px;
+  }
+
+  a {
+    align-items: center;
+    color: var(--sl-color-gray-2);
+    display: flex;
+    font-size: var(--sl-text-base);
+    font-weight: 600;
+    gap: 0.625rem;
+    line-height: 1;
+    padding: 0.5rem 0.625rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: color 0.2s ease;
+    position: relative;
+    outline: none;
+  }
+
+  a:hover {
+    color: var(--sl-color-white);
+  }
+
+  a.starlight-sidebar-topics-current {
+    color: var(--sl-color-accent-high);
+  }
+
+  :global([data-theme='light']) .topics-track a {
+    color: var(--sl-color-gray-2);
+  }
+
+  :global([data-theme='light']) .topics-track a:hover {
+    color: var(--sl-color-accent);
+  }
+
+  :global([data-theme='light']) .topics-track a.starlight-sidebar-topics-current {
+    color: var(--sl-color-accent);
+  }
+
+  .starlight-sidebar-topics-icon {
+    align-items: center;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .starlight-sidebar-topics-image {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+
+  .topic-label {
+    display: flex;
+    align-items: center;
+  }
+
+  .starlight-sidebar-topics-badge {
+    margin-inline-start: 0.375em;
+  }
+</style>
