@@ -1,0 +1,136 @@
+---
+title: 配置文件
+---
+
+# server.properties
+
+server.properties是储存多人游戏（Minecraft或Minecraft Classic）服务器所有设置的文件。
+
+在编辑server.properties时，行之间的顺序可以打乱，但文件结构不能改变。每一行的等号之前的文本为变量名，你不应该修改这些内容。等号后面为变量的值，你可以按照规则自行编辑。以#开头的行为注释，添加、修改或移除注释行不会对游戏造成影响。
+
+详见[server.properties - Minecraft Wiki](https://minecraft.fandom.com/zh/wiki/Server.properties)
+
+```properties title="server.properties"
+# 是否允许此服务器接受来自其他服务器的转移命令/数据包
+accept-transfers=false
+# 意味着在生存模式下用户不会因为飞行而被踢出
+allow-flight=false
+# 允许用户前往下界
+allow-nether=true
+# 将控制台命令输出发送给所有在线操作员
+broadcast-console-to-ops=true
+# 将rcon命令输出发送给所有在线操作员
+broadcast-rcon-to-ops=true
+# 用于服务器链接客户端菜单中的报告服务器错误按钮的URL值
+bug-report-link=
+# 启用服务器的调试模式
+debug=false
+# 定义服务器的难度 (peaceful, easy, normal, hard)
+difficulty=easy
+# 启用命令方块
+enable-command-block=true
+# 暴露MBean用于监控tick时间
+enable-jmx-monitoring=false
+# 启用GameSpy4协议服务器监听器
+enable-query=false
+# 启用对服务器控制台的远程访问
+enable-rcon=false
+# 使服务器在服务器列表中可见
+enable-status=true
+# 未持有Mojang签名公钥的玩家将无法连接
+enforce-secure-profile=true
+# 服务器将踢出不在白名单上的玩家
+enforce-whitelist=false
+# 控制实体渲染距离百分比 (10-1000)
+entity-broadcast-range-percentage=100
+# 强制玩家以默认游戏模式加入
+force-gamemode=false
+# 设置函数的默认权限级别 (1, 2, 3, 4)
+function-permission-level=2
+# 定义游戏玩法模式 (survival, creative, adventure, spectator)
+gamemode=survival
+# 定义是否生成结构（例如村庄）
+generate-structures=true
+# 用于自定义世界生成的设置
+generator-settings={}
+# 硬核模式
+hardcore=false
+# 隐藏在线玩家列表
+hide-online-players=false
+# 需要在创建世界过程中禁用的数据包名称
+initial-disabled-packs=
+# 需要在创建世界过程中启用的数据包名称
+initial-enabled-packs=vanilla
+# 世界的名称（存档文件夹名称）
+level-name=world
+# 用于生成世界的种子
+level-seed=
+# 使用世界预设ID
+level-type=minecraft:normal
+# 是否记录玩家IP地址
+log-ips=true
+# 限制连锁NC更新的数量
+max-chained-neighbor-updates=1000000
+# 服务器同时能容纳的最大玩家数量
+max-players=20
+# 每个tick花费的最大毫秒数
+max-tick-time=60000
+# 世界边界最大半径
+max-world-size=29999984
+# 玩家客户端显示的服务器信息
+motd=A Minecraft Server
+# 数据包压缩阈值
+network-compression-threshold=256
+# 是否验证登录信息（正版验证）
+online-mode=true
+# 操作员的默认权限级别 (0, 1, 2, 3, 4)
+op-permission-level=4
+# 玩家闲置超时踢出（分钟）
+player-idle-timeout=0
+# 防止代理连接
+prevent-proxy-connections=false
+# 是否允许PvP
+pvp=true
+# 查询服务器的端口
+query.port=25565
+# 最大数据包发送速率限制
+rate-limit=0
+# rcon服务器的密码
+rcon.password=
+# rcon服务器的端口
+rcon.port=25575
+# 玩家必须拥有资源包才能连接
+require-resource-pack=false
+# 服务器资源包的URL
+resource-pack=
+# 服务器资源包的UUID
+resource-pack-id=
+# 下载资源包时显示的消息
+resource-pack-prompt=
+# 资源包的SHA1哈希
+resource-pack-sha1=
+# 绑定服务器IP
+server-ip=
+# 监听连接的端口
+server-port=25565
+# 生物实体更新距离 (3-32)
+simulation-distance=10
+# 动物是否能够生成
+spawn-animals=true
+# 是否生成怪物
+spawn-monsters=true
+# 是否生成NPC
+spawn-npcs=true
+# 生成保护边长
+spawn-protection=16
+# 启用区块数据的同步写入
+sync-chunk-writes=true
+# 文本过滤配置文件路径
+text-filtering-config=
+# 是否使用Linux平台网络优化
+use-native-transport=true
+# 服务器视距 (3-32)
+view-distance=10
+# 启用服务器白名单
+white-list=false
+```
