@@ -1,0 +1,83 @@
+﻿---
+title: 快速开始
+---
+
+import { Tabs, TabItem, Steps } from '@astrojs/starlight/components';
+
+
+## 选择并下载服务端
+
+| 服务端 | 下载渠道 | 特点 |
+| :---: | :---: | :---: |
+| Paper | [Paper downloads](https://papermc.io/downloads/paper) | 稳定修特性 |
+| Spigot | [SPIGOT](https://getbukkit.org/download/spigot) | 稳定 |
+| Purpur | [Purpur](https://purpurmc.org/) | 高性能 修特性 |
+| Leaves | [Leaves](https://leavesmc.org/downloads/leaves) | 稳定 性能较高 能生电 |
+| Leaf | [Leaf](https://github.com/Winds-Studio/Leaf/releases) | 高性能 多核优化 |
+
+## 安装 Java 环境
+
+运行 Spigot 系服务端需要 Java。或许你已经安装了 Java，但你可能需要升级 Java 版本。
+
+如果您的计算机运行 Windows 或 macOS 操作系统，您可以 [Adoptium](https://adoptium.net/zh-CN/temurin/releases/) 下载 OpenJDK。 Java 8、11 和 17 都可在这里找到。
+
+:::tip[常用的 Java 环境]
+
+- [Azul Zulu OpenJDK](https://www.azul.com/downloads/)（推荐）对于游戏优化方面，Zulu 内存占用相对较小。
+- [Dragonwell](https://github.com/dragonwell-project)（推荐）据说在运算上有优化。
+- [Adoptium](https://adoptium.net/zh-CN/temurin/releases/)
+- [Microsoft Build of OpenJDK](https://learn.microsoft.com/zh-cn/java/openjdk/download) 不知道优化了什么
+- [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) 原汁原味（大雾
+- [Red Hat build of OpenJDK](https://developers.redhat.com/products/openjdk/download) 我不知道为什么很多人都推荐这个，但是嘛我相信红帽[狗头]（需要账户）
+- [Liberica JDK](https://bell-sw.com/pages/downloads/) Liberica JDK 是一位代表接触的第一个除 Oracle JDK 以外的 JDK
+- [Semeru JDK](https://developer.ibm.com/languages/java/semeru-runtimes/downloads/) 使用了 OpenJ9 VM 降低 JVM 的内存占用和处理器占用
+
+:::
+
+:::note[版本说明]
+
+- 如果为 Minecraft 1.20.5 及以上版本使用 Java 21
+- Java 17 LTS 版本适用于 Minecraft 1.17-1.20.4 版本，Minecraft 1.17-1.17.1 默认 Java 版本是 16，Java 17 LTS 向下兼容。
+- Java 8 LTS 版本适用于 Minecraft 1.12-1.16.5 版本，Java 11 LTS 版本向下兼容。
+
+:::
+
+:::caution[你可能需要手动调整 Java 的路径]
+
+- 在 Profile（Advanced Options）中，依次找到 `档案名` -> Java-Executable（.../java.exe）
+- 服务器使用全局 PATH 变量或者你指定的完整 Java 运行时的路径。
+
+:::
+
+## 启动服务器
+
+<Tabs syncKey="os">
+<TabItem label="Windows">
+
+Shift + 右键服务器文件夹，单击"在此处打开命令窗口"
+
+键入 `java -jar server.jar nogui` 回车。
+
+服务器将会启动。
+
+</TabItem>
+<TabItem label="Linux">
+
+打开终端
+
+键入 `java -jar server.jar nogui` 回车。
+
+服务器将会启动。
+
+</TabItem>
+</Tabs>
+
+:::tip[性能优化]
+[服务器启动脚本生成器](https://flags.sh.cn/)
+:::
+
+> 如果你是第一次启动服务器，会遇到 [命令行提示 `You need to agree to the EULA in order to run the server. Go to eula.txt for more info.` 后自动退出了](/java/spigotseries/faq/) 的问题。
+
+## 本教程引用了一些作者的文章
+
+- [shaokeyibb/Minecraft-Server-Starting-Guide](https://github.com/shaokeyibb/Minecraft-Server-Starting-Guide)
