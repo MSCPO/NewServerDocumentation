@@ -6,6 +6,7 @@ import starlightImageZoom from 'starlight-image-zoom';
 import starlightLinksValidator from 'starlight-links-validator';
 import starlightHeadingBadges from 'starlight-heading-badges';
 import starlightSidebarTopics from 'starlight-sidebar-topics';
+import starlightAnnouncement from 'starlight-announcement';
 import compress from '@playform/compress';
 import { remarkMermaid } from './src/plugins/remark-mermaid.mjs';
 
@@ -64,6 +65,17 @@ export default defineConfig({
 				starlightImageZoom(),
 				starlightLinksValidator(),
 				starlightHeadingBadges(),
+				starlightAnnouncement({
+					announcements: [
+						{
+							id: 'migration-notice',
+							content: {
+								'zh-CN': '⚠️ 本站正在迁移中，部分数据未对齐原站且数据可能陈旧，请谅解。',
+							},
+							variant: 'caution',
+						},
+					],
+				}),
 				starlightSidebarTopics([
 					{
 						id: 'java',

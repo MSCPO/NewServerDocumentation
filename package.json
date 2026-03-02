@@ -1,7 +1,11 @@
 {
-  "name": "d-website-mscpodocstoastro-mscpodocastro",
+  "name": "mscpo-new-server-documentation",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MSCPO/NewServerDocumentation.git"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -20,6 +24,7 @@
     "astro-vtbot": "^2.1.12",
     "mermaid": "^11.12.2",
     "sharp": "^0.34.5",
+    "starlight-announcement": "^1.1.0",
     "starlight-contributor-list": "^0.4.0",
     "starlight-heading-badges": "^0.7.0",
     "starlight-image-zoom": "^0.14.2",
