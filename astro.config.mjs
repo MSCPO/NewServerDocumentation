@@ -7,6 +7,7 @@ import starlightLinksValidator from 'starlight-links-validator';
 import starlightHeadingBadges from 'starlight-heading-badges';
 import starlightSidebarTopics from 'starlight-sidebar-topics';
 import starlightAnnouncement from 'starlight-announcement';
+import starlightBlog from 'starlight-blog';
 import compress from '@playform/compress';
 import { remarkMermaid } from './src/plugins/remark-mermaid.mjs';
 
@@ -65,6 +66,12 @@ export default defineConfig({
 				starlightImageZoom(),
 				starlightLinksValidator(),
 				starlightHeadingBadges(),
+				starlightBlog({
+					title: '番外篇',
+					postsPerPage: 10,
+					recentPostsCount: 10,
+					navLink: 'none',
+				}),
 				starlightAnnouncement({
 					announcements: [
 						{
@@ -79,11 +86,12 @@ export default defineConfig({
 				starlightSidebarTopics([
 					{
 						id: 'java',
-						label: 'Java',
-						link: '/java/vanilla/',
+						label: 'Java篇',
+						link: '/java/',
 						icon: '/assets/ronglu.webp',
 						badge: { text: '推荐', variant: 'success' },
 						items: [
+							{ label: '概览', link: '/java/' },
 							{
 								label: 'Vanilla(原版)',
 								items: [
@@ -204,10 +212,11 @@ export default defineConfig({
 					},
 					{
 						id: 'bedrock',
-						label: '基岩',
-						link: '/bedrock/bds/',
+						label: '基岩篇',
+						link: '/bedrock/',
 						icon: '/assets/jiyan.webp',
 						items: [
+							{ label: '概览', link: '/bedrock/' },
 							{
 								label: 'BDS（原版）',
 								items: [
@@ -227,10 +236,9 @@ export default defineConfig({
 					{
 						id: 'extra',
 						label: '番外篇',
-						link: '/extra/',
+						link: '/blog/',
 						icon: '/assets/chalkboard.webp',
 						items: [
-							{ label: '番外篇', link: '/extra/' },
 							{ label: '如何贡献', link: '/contribute/' },
 						],
 					},
@@ -248,7 +256,7 @@ export default defineConfig({
 					topics: {
 						java: ['/java', '/java/**/*'],
 						bedrock: ['/bedrock', '/bedrock/**/*'],
-						extra: ['/extra', '/extra/**/*', '/contribute', '/contribute/**/*'],
+						extra: ['/blog', '/blog/**/*', '/contribute', '/contribute/**/*'],
 						progress: ['/progress', '/progress/**/*'],
 					},
 				}),

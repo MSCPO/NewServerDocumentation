@@ -1,0 +1,57 @@
+---
+title: " "
+description: 了解如何搭建Minecraft Java版服务器
+---
+
+import { CardGrid } from '@astrojs/starlight/components';
+import ImageCard from '../../../components/ImageCard.astro';
+
+Java版是Minecraft最经典的版本，拥有最丰富的服务器端选择和插件生态系统。
+
+:::caution[在开始前，请确保]
+- 具备**基础**的计算机操作技能
+- 具备使用**搜索引擎**搜索关键词的能力
+- 询问问题前，先找出因果关系，后通过全面的信息整合出一个合理的问题。而不是忽视其他文档，不顾前因后果，情绪亢奋的进行提问
+:::
+
+## 选择服务器端
+
+<CardGrid>
+  <ImageCard title="Vanilla（原版）" img="/Images/JAVA/favicon.png" link="/java/vanilla/" />
+  <ImageCard title="Spigot系" img="/Images/Chalkboard_Board.png" link="/java/spigotseries/" />
+  <ImageCard title="Forge / NeoForge" img="/Images/Name_Tag.png" link="/java/mod/forge_neoforge/" />
+  <ImageCard title="Fabric / Quilt" img="/Images/Lab_Table.png" link="/java/mod/farbic_quilt/quickstart/" />
+  <ImageCard title="Sponge" img="/Images/Nether_Reactor_Core.webp" link="/java/sponge/" />
+  <ImageCard title="Cuberite" img="/assets/ronglu.webp" link="/java/cuberite/" />
+</CardGrid>
+
+## 如何选择？
+
+- **新手推荐**：Paper（性能好，文档多）
+- **模组玩家**：Forge/NeoForge或Fabric/Quilt
+- **小型联机**：Vanilla
+- **大型服务器**：Paper或Pufferfish
+
+## 服务器端简介
+
+### Vanilla（原版）
+官方原生服务端，兼容性最好，但扩展性有限。适合小型朋友联机服务器。
+
+### Spigot系
+基于CraftBukkit的服务端，支持插件，是Java版最流行的服务端系列。包括：
+- Spigot：高性能服务端
+- Paper：Spigot的优化版本，性能更好
+- Pufferfish：进一步优化的Paper分支
+- Purpur：功能最丰富的Paper分支
+
+### Forge/NeoForge
+支持模组的服务端，可以运行大量模组。适合想要模组化游戏体验的玩家。
+
+### Fabric/Quilt
+轻量级模组加载器，启动速度快，模组生态活跃。
+
+### Sponge
+SpongeAPI服务端，提供独特的插件系统和API。
+
+### Cuberite
+用C++编写的服务端，性能优异，但生态相对较小。

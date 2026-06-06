@@ -1,0 +1,55 @@
+---
+title: " "
+description: 了解如何搭建Minecraft基岩版服务器
+---
+
+import { CardGrid } from '@astrojs/starlight/components';
+import ImageCard from '../../../components/ImageCard.astro';
+
+基岩版（Bedrock Edition）是Minecraft的跨平台版本，支持Windows 10/11、移动设备、Xbox、PlayStation和Nintendo Switch。
+
+:::caution[在开始前，请确保]
+- 具备**基础**的计算机操作技能
+- 具备使用**搜索引擎**搜索关键词的能力
+- 询问问题前，先找出因果关系，后通过全面的信息整合出一个合理的问题。而不是忽视其他文档，不顾前因后果，情绪亢奋的进行提问
+:::
+
+## 选择服务器端
+
+<CardGrid>
+  <ImageCard title="BDS（原版）" img="/Images/Bedrock/favicon.png" link="/bedrock/bds/" />
+  <ImageCard title="PocketMine-MP" img="/Images/Bedrock/PocketMine-MP.png" link="/bedrock/pocketmine/" />
+  <ImageCard title="Nukkit" img="/Images/Bedrock/Nukkit.png" link="/bedrock/nukkit/" />
+</CardGrid>
+
+## 如何选择？
+
+- **原版体验**：BDS
+- **需要插件**：BDS + LeviLamina或Endstone
+- **轻量级**：PocketMine-MP或Nukkit
+- **跨平台**：所有基岩版服务端都支持跨平台
+
+## 服务器端简介
+
+### BDS（Bedrock Dedicated Server）
+官方原生服务端，提供最原始的基岩版游戏体验。原生支持行为包，不支持插件。
+
+**特点：**
+- Mojang官方支持
+- 原生兼容性最好
+- 性能优秀
+- 不支持插件（需要第三方注入器）
+
+### PocketMine-MP
+用PHP编写的服务端，有自己的插件生态系统。
+
+### Nukkit/NukkitX
+用Java编写的服务端，跨平台兼容性好。
+
+### 第三方注入器
+
+#### LeviLamina
+BDS的注入器，提供插件系统，社区活跃。
+
+#### Endstone
+另一个BDS注入器，提供Python和C++插件支持。

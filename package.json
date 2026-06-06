@@ -26,6 +26,7 @@
     "mermaid": "^11.12.2",
     "sharp": "^0.34.5",
     "starlight-announcement": "^1.1.0",
+    "starlight-blog": "^0.26.1",
     "starlight-heading-badges": "^0.7.0",
     "starlight-image-zoom": "^0.14.2",
     "starlight-links-validator": "^0.24.0",

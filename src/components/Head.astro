@@ -70,4 +70,42 @@ import { ClientRouter } from 'astro:transitions';
   })();
 </script>
 
+<script is:inline>
+  (function () {
+    var SITE_NAME = 'MSCPO开服文档';
+    var CATEGORIES = [
+      { prefix: '/java/', label: 'Java篇' },
+      { prefix: '/bedrock/', label: '基岩篇' },
+      { prefix: '/blog/', label: '番外篇' },
+      { prefix: '/extra/', label: '番外篇' },
+      { prefix: '/contribute/', label: '番外篇' },
+      { prefix: '/progress/', label: '编写进度' },
+    ];
+
+    function formatTitle() {
+      var path = window.location.pathname.replace(/index\.html$/, '');
+      var category = '';
+      for (var i = 0; i < CATEGORIES.length; i++) {
+        if (path === CATEGORIES[i].prefix || path.indexOf(CATEGORIES[i].prefix) === 0) {
+          category = CATEGORIES[i].label;
+          break;
+        }
+      }
+      var currentTitle = document.title;
+      var sep = currentTitle.indexOf(' | ');
+      var pageTitle = sep > -1 ? currentTitle.substring(0, sep) : currentTitle;
+      if (!category) {
+        document.title = pageTitle ? pageTitle + ' | ' + SITE_NAME : SITE_NAME;
+      } else if (!pageTitle || pageTitle.trim() === '' || pageTitle === category) {
+        document.title = category + ' | ' + SITE_NAME;
+      } else {
+        document.title = category + ' | ' + pageTitle + ' | ' + SITE_NAME;
+      }
+    }
+
+    formatTitle();
+    document.addEventListener('astro:after-swap', formatTitle);
+  })();
+</script>
+
 <ClientRouter fallback="animate" />

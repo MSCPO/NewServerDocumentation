@@ -1,11 +1,12 @@
 ---
 import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import StarlightBlogMarkdownContent from 'starlight-blog/overrides/MarkdownContent.astro';
 ---
 
-<Default {...Astro.props}>
+<StarlightBlogMarkdownContent>
 	<slot />
-</Default>
+</StarlightBlogMarkdownContent>
 
 <script>
 	import '../scripts/mermaid-render';
