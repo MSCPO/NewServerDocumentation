@@ -60,6 +60,7 @@ export default defineConfig({
 				Sidebar: './src/components/CustomSidebar.astro',
 				PageTitle: './src/components/PageTitle.astro',
 				Footer: './src/components/CustomFooter.astro',
+				ThemeSelect: './src/components/ThemeSelect.astro',
 			},
 			customCss: ['./src/styles/custom.css'],
 			plugins: [
@@ -71,6 +72,7 @@ export default defineConfig({
 					postsPerPage: 10,
 					recentPostsCount: 10,
 					navLink: 'none',
+					rss: false,
 				}),
 				starlightAnnouncement({
 					announcements: [
