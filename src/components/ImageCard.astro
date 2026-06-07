@@ -20,6 +20,7 @@ const { title, img, link, alt = '' } = Astro.props;
       <span>{title}</span>
     </p>
     <span class="arrow-btn">
+      <span class="arrow-text">前往</span>
       <Icon name="right-arrow" size="1.5rem" />
     </span>
   </article>
@@ -86,11 +87,13 @@ const { title, img, link, alt = '' } = Astro.props;
     gap: 0.75rem;
     transition: border-color 0.25s ease, background 0.3s ease, color 0.3s ease;
     background: rgba(10, 10, 20, 0.7);
+    backdrop-filter: blur(12px);
   }
 
   :global([data-theme='light']) .card {
     background: rgba(255, 255, 255, 0.85);
     border-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(16px);
   }
 
   .card:hover,
@@ -166,4 +169,7 @@ const { title, img, link, alt = '' } = Astro.props;
     z-index: 2;
   }
 
+  .arrow-text {
+    display: none;
+  }
 </style>

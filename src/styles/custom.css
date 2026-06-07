@@ -216,14 +216,51 @@ main {
 .version-selector .card .arrow-btn {
   background: var(--sl-color-accent) !important;
   color: #fff !important;
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              padding 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              background 0.3s ease !important;
+}
+
+.version-selector .card .arrow-text {
+  display: block !important;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease 0.08s, width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .version-selector .card:hover .arrow-btn {
+  width: 5.5rem !important;
+  padding: 0 0.75rem !important;
+  justify-content: flex-start !important;
   background: rgba(209, 1, 51, 0.75) !important;
 }
 
 .version-selector .card:hover .arrow-btn::after {
+  content: '' !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  border-radius: 50% !important;
   background: #d10133 !important;
+  z-index: 1 !important;
+}
+
+.version-selector .card:hover .arrow-btn svg {
+  margin-inline-start: auto !important;
+}
+
+.version-selector .card:hover .arrow-text {
+  opacity: 1 !important;
+  width: auto !important;
 }
 
 :global([data-theme='light']) .version-selector .card .arrow-btn {
@@ -232,11 +269,31 @@ main {
 }
 
 :global([data-theme='light']) .version-selector .card:hover .arrow-btn {
+  width: 5.5rem !important;
+  padding: 0 0.75rem !important;
+  justify-content: flex-start !important;
   background: rgba(209, 1, 51, 0.75) !important;
 }
 
 :global([data-theme='light']) .version-selector .card:hover .arrow-btn::after {
+  content: '' !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+  border-radius: 50% !important;
   background: #d10133 !important;
+  z-index: 1 !important;
+}
+
+:global([data-theme='light']) .version-selector .card:hover .arrow-btn svg {
+  margin-inline-start: auto !important;
+}
+
+:global([data-theme='light']) .version-selector .card:hover .arrow-text {
+  opacity: 1 !important;
+  width: auto !important;
 }
 
 .custom-hero {
