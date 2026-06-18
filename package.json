@@ -29,7 +29,7 @@
     "starlight-blog": "^0.26.1",
     "starlight-heading-badges": "^0.7.0",
     "starlight-image-zoom": "^0.14.2",
-    "starlight-links-validator": "^0.24.0",
+    "starlight-links-validator": "^0.24.1",
     "starlight-sidebar-topics": "^0.7.1",
     "tailwindcss": "^4.3.1",
     "unist-util-visit": "^5.1.0",
