@@ -1,49 +1,64 @@
-# Starlight Starter Kit: Basics
+# MSCPO开服文档
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+我的世界开服教程（新手向），涵盖Java版和基岩版不同服务端的搭建指南。
 
-```
-pnpm create astro@latest -- --template starlight
-```
+这个项目是从[老项目](https://github.com/MSCPO/ServerDocumentation)迁移过来的，主要是把Vitepress换成了Astro，顺便整理了一下内容结构。老项目用Netlify托管，现在我们有了自己的域名。
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 在线阅读
 
-## 🚀 Project Structure
+- https://mcs.mscpo.org/
+- https://mcs.mscpo.com/
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## 本地运行
+
+> [!NOTE]
+> 请先安装[Node.js](https://nodejs.org/zh-cn) 18+ 和 [pnpm](https://pnpm.io/)
+
+1. 克隆仓库
+   ```
+   git clone https://github.com/MSCPO/NewServerDocumentation.git
+   ```
+2. 进入项目目录
+   ```
+   cd NewServerDocumentation
+   ```
+3. 安装依赖
+   ```
+   pnpm install
+   ```
+4. 启动开发服务器
+   ```
+   pnpm dev
+   ```
+5. 浏览器打开 http://localhost:4321/
+
+## 项目结构
 
 ```
 .
-├── public/
+├── public/          # 静态资源（图片、字体等）
 ├── src/
-│   ├── assets/
+│   ├── assets/      # 项目资源
+│   ├── components/  # 自定义组件
 │   ├── content/
-│   │   └── docs/
+│   │   └── docs/    # 文档内容（Markdown/MDX）
+│   ├── styles/      # 自定义样式
 │   └── content.config.ts
-├── astro.config.mjs
+├── astro.config.mjs # Astro配置
 ├── package.json
 └── tsconfig.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+文档主要在 `src/content/docs/` 目录下，按Java版和基岩版分类组织。
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## 文档贡献者
 
-Static assets, like favicons, can be placed in the `public/` directory.
+<a href="https://github.com/MSCPO/NewServerDocumentation/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MSCPO/NewServerDocumentation" alt="Contributors"/>
+</a>
 
-## 🧞 Commands
+## 技术栈
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+- [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/)
+- [pnpm](https://pnpm.io/) 包管理
+- 部署在 [Netlify](https://www.netlify.com/)
