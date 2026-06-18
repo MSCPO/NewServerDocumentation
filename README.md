@@ -61,4 +61,4 @@
 
 - [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/)
 - [pnpm](https://pnpm.io/) 包管理
-- 部署在 [Netlify](https://www.netlify.com/)
+- 部署在 [Cloudflare Pages](https://pages.cloudflare.com/)
