@@ -22,7 +22,7 @@
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.4.8",
     "astro-contributors": "^0.8.0",
-    "astro-vtbot": "^2.1.12",
+    "astro-vtbot": "^3.0.0",
     "mermaid": "^11.12.2",
     "sharp": "^0.35.1",
     "starlight-announcement": "^1.1.0",
