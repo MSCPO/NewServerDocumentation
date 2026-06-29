@@ -23,7 +23,7 @@
     "astro": "^6.4.8",
     "astro-contributors": "^0.8.0",
     "astro-vtbot": "^2.1.12",
-    "mermaid": "^11.12.2",
+    "mermaid": "^11.16.0",
     "sharp": "^0.35.1",
     "starlight-announcement": "^1.1.0",
     "starlight-blog": "^0.26.1",
