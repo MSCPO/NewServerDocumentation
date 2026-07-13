@@ -30,13 +30,13 @@ importers:
         specifier: ^6.4.8
         version: 6.4.8(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)
       astro-contributors:
-        specifier: ^0.8.0
-        version: 0.8.0(astro@6.4.8(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0))
+        specifier: ^0.9.0
+        version: 0.9.0(astro@6.4.8(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0))
       astro-vtbot:
         specifier: ^3.0.0
         version: 3.0.0
       mermaid:
-        specifier: ^11.16.0
+        specifier: ^11.12.2
         version: 11.16.0
       sharp:
         specifier: ^0.35.1
@@ -1196,11 +1196,11 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro-contributors@0.8.0:
-    resolution: {integrity: sha512-oz1sZ8K8Yq6bbLbhGV8e5C5Tif9+UB4oeREAqkQ3ehh4+e1OP03RXaAf2JkIhzEr+0et986MOHUO1iYt1wGZeQ==}
-    engines: {node: '>=22.12.0'}
+  astro-contributors@0.9.0:
+    resolution: {integrity: sha512-GIDlHJrQFEMEkvWmZaQj7nKIw4db3CXrP9aJ6pvoJ3/kfw/O5aJt07163AlyLLtyh08hdSWOKJu9ChAvkyKtLA==}
+    engines: {node: '>=22.22.3'}
     peerDependencies:
-      astro: ^6.0.0
+      astro: ^5.0.0 || ^6.0.0 || ^7.0.0
 
   astro-expressive-code@0.42.0:
     resolution: {integrity: sha512-aiTePi2Cn0mJPYWZSzP1GcxCinX9mNtJyCCshVVPSg1yRwM7ADvFJOx0FnS440M9t65hp8JH//dc2qr22Bm4ag==}
@@ -3977,7 +3977,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-contributors@0.8.0(astro@6.4.8(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)):
+  astro-contributors@0.9.0(astro@6.4.8(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)):
     dependencies:
       astro: 6.4.8(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0)
 
