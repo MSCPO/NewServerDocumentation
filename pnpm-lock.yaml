@@ -33,8 +33,8 @@ importers:
         specifier: ^0.8.0
         version: 0.8.0(astro@6.4.8(@types/node@24.12.4)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.60.4)(terser@5.46.1)(yaml@2.9.0))
       astro-vtbot:
-        specifier: ^2.1.12
-        version: 2.1.12
+        specifier: ^3.0.0
+        version: 3.0.0
       mermaid:
         specifier: ^11.16.0
         version: 11.16.0
@@ -1211,8 +1211,8 @@ packages:
     resolution: {integrity: sha512-jL5skNQLA0YBc1R3bVGXyHew3FqGqsT7AgLzWAVeTLzFkwVMUYvs4/lKJSmS7ygcF1GnHnoKG6++8GL9VtWwGQ==}
     engines: {node: '>=18.14.1'}
 
-  astro-vtbot@2.1.12:
-    resolution: {integrity: sha512-6RlA0rdVPLT24FAyxsHAI71quTrLWuMXOADhcx8uEMTfuIVRhg4GajzmZmOiX6/nHA9p1gaIBuaTF3jVE1XWSA==}
+  astro-vtbot@3.0.0:
+    resolution: {integrity: sha512-jVpYqaPi9Nz5UP9KgDFatSzXIe6n0w2YJjjzdsxNicd2ETQlfOkzbP8Qu7W6HC0DCE4dNTWLs8o7QRiFDqJkfw==}
 
   astro@6.4.2:
     resolution: {integrity: sha512-8H89CH2dKL5SCU99OCqdU9BGjmPkSJqaPurywj5XMo7eMFGUFD3vsNhdEKnEh4mK4LgGje3/QDTTSIIGst0G0Q==}
@@ -3994,7 +3994,7 @@ snapshots:
       marked-smartypants: 1.1.12(marked@12.0.2)
       ultrahtml: 1.6.0
 
-  astro-vtbot@2.1.12:
+  astro-vtbot@3.0.0:
     dependencies:
       '@vtbag/cam-shaft': 1.0.6
       '@vtbag/element-crossing': 1.1.0
