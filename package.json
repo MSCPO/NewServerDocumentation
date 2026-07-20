@@ -19,7 +19,7 @@
     "@astrojs/starlight": "^0.40.0",
     "@pagefind/default-ui": "^1.5.2",
     "@playform/compress": "^0.2.3",
-    "@tailwindcss/vite": "^4.3.0",
+    "@tailwindcss/vite": "^4.3.3",
     "astro": "^6.4.8",
     "astro-contributors": "^0.8.0",
     "astro-vtbot": "^3.0.0",
