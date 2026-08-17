@@ -33,8 +33,8 @@ importers:
         specifier: ^0.8.0
         version: 0.8.0(astro@6.4.8(@types/node@26.1.2)(jiti@2.7.0)(lightningcss@1.33.0)(rollup@4.60.4)(terser@5.49.2)(yaml@2.9.0))
       astro-vtbot:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^3.1.0
+        version: 3.1.0
       mermaid:
         specifier: ^11.12.2
         version: 11.16.0
@@ -1259,8 +1259,8 @@ packages:
   '@vtbag/turn-signal@1.3.1':
     resolution: {integrity: sha512-6rWkG+ik3U+KQGI94yNOrOh5QedB9zmP/8H51X5WQwrJz8m2MAU5YwGRRcweO/dJ6wW/Bn7OsgC1vRURnwrvCg==}
 
-  '@vtbag/utensil-drawer@1.2.16':
-    resolution: {integrity: sha512-RSahZXk4NAFTF3zDYQH1x4qv8gFLcWus7qD//D0b58zoZIeqa2uKePLMy4lSHagYdkwBlKXKlfcDSrqUvWmxnw==}
+  '@vtbag/utensil-drawer@1.2.18':
+    resolution: {integrity: sha512-Veg1J8lviA2g878otiEHoyiGR2f4PZ5Rc40UyIR4YS95QnD+1+oAZsprhUPR+YudgZPrqWx5chyPNwjkHyA0uw==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1317,8 +1317,8 @@ packages:
     resolution: {integrity: sha512-jL5skNQLA0YBc1R3bVGXyHew3FqGqsT7AgLzWAVeTLzFkwVMUYvs4/lKJSmS7ygcF1GnHnoKG6++8GL9VtWwGQ==}
     engines: {node: '>=18.14.1'}
 
-  astro-vtbot@3.0.0:
-    resolution: {integrity: sha512-jVpYqaPi9Nz5UP9KgDFatSzXIe6n0w2YJjjzdsxNicd2ETQlfOkzbP8Qu7W6HC0DCE4dNTWLs8o7QRiFDqJkfw==}
+  astro-vtbot@3.1.0:
+    resolution: {integrity: sha512-YZX+Sv3EHRaAryyEJ28N9ausnAG4JxM9ivY+BeRJEa/neWBHmZaQ3onMcdxBFg/u7e+8+YOepuQC8Bt2lx8fKg==}
 
   astro@6.4.8:
     resolution: {integrity: sha512-KK5lX90uU9EeVaTjINyj3sy9/NFXVa59aowaqbWBDDKLXZh4rr7GwIaCFYVetE22MJtsCNFerQXn0vlCLmpP/Q==}
@@ -2820,9 +2820,6 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  tailwindcss@4.3.1:
-    resolution: {integrity: sha512-hk+TB1m+K8CYNrP6rjQaq/Y+4Zylwpa87mLYBKCunwnnQ9p+fHb7kmSfGqyEJoxF/O6CDyABWVFEafNSYKll+Q==}
-
   tailwindcss@4.3.3:
     resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
 
@@ -4260,7 +4257,7 @@ snapshots:
 
   '@vtbag/turn-signal@1.3.1': {}
 
-  '@vtbag/utensil-drawer@1.2.16': {}
+  '@vtbag/utensil-drawer@1.2.18': {}
 
   acorn-jsx@5.3.2(acorn@8.18.0):
     dependencies:
@@ -4306,13 +4303,13 @@ snapshots:
       marked-smartypants: 1.1.12(marked@12.0.2)
       ultrahtml: 1.6.0
 
-  astro-vtbot@3.0.0:
+  astro-vtbot@3.1.0:
     dependencies:
       '@vtbag/cam-shaft': 1.0.6
       '@vtbag/element-crossing': 1.1.0
       '@vtbag/inspection-chamber': 1.0.24
       '@vtbag/turn-signal': 1.3.1
-      '@vtbag/utensil-drawer': 1.2.16
+      '@vtbag/utensil-drawer': 1.2.18
 
   astro@6.4.8(@types/node@26.1.2)(jiti@2.7.0)(lightningcss@1.33.0)(rollup@4.60.4)(terser@5.49.2)(yaml@2.9.0):
     dependencies:
@@ -6484,8 +6481,6 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.1.1
       sax: 1.6.1
-
-  tailwindcss@4.3.1: {}
 
   tailwindcss@4.3.3: {}
 
