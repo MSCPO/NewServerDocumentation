@@ -18,7 +18,7 @@
     "@astrojs/sitemap": "^3.7.3",
     "@astrojs/starlight": "^0.40.0",
     "@pagefind/default-ui": "^1.5.2",
-    "@playform/compress": "^0.2.3",
+    "@playform/compress": "^0.2.5",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.4.8",
     "astro-contributors": "^0.8.0",
