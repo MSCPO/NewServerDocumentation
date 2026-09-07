@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.2.4",
-    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/sitemap": "^3.7.4",
     "@astrojs/starlight": "^0.40.0",
     "@pagefind/default-ui": "^1.5.2",
     "@playform/compress": "^0.2.5",
