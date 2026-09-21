@@ -33,6 +33,6 @@
     "starlight-sidebar-topics": "^0.7.1",
     "tailwindcss": "^4.3.3",
     "unist-util-visit": "^5.1.0",
-    "yaml": "^2.9.0"
+    "yaml": "^2.9.1"
   }
 }
