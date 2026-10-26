@@ -30,8 +30,8 @@ importers:
         specifier: ^6.4.8
         version: 6.4.8(@types/node@26.1.2)(jiti@2.7.0)(lightningcss@1.33.0)(rollup@4.60.4)(supports-color@10.2.2)(terser@5.49.2)(yaml@2.9.1)
       astro-contributors:
-        specifier: ^0.8.0
-        version: 0.8.0(astro@6.4.8(@types/node@26.1.2)(jiti@2.7.0)(lightningcss@1.33.0)(rollup@4.60.4)(supports-color@10.2.2)(terser@5.49.2)(yaml@2.9.1))
+        specifier: ^0.10.0
+        version: 0.10.0(astro@6.4.8(@types/node@26.1.2)(jiti@2.7.0)(lightningcss@1.33.0)(rollup@4.60.4)(supports-color@10.2.2)(terser@5.49.2)(yaml@2.9.1))
       astro-vtbot:
         specifier: ^3.1.0
         version: 3.1.0
@@ -1287,11 +1287,11 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro-contributors@0.8.0:
-    resolution: {integrity: sha512-oz1sZ8K8Yq6bbLbhGV8e5C5Tif9+UB4oeREAqkQ3ehh4+e1OP03RXaAf2JkIhzEr+0et986MOHUO1iYt1wGZeQ==}
+  astro-contributors@0.10.0:
+    resolution: {integrity: sha512-UoLefrf3CQEWeWjmkIGtPVZOnfRhjoiuK/10Jwb5URK6tilUlon7H3FOS66hih05cWjG2r7z+EICTVn1lrvXyw==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
-      astro: ^6.0.0
+      astro: ^5.0.0 || ^6.0.0 || ^7.0.0
 
   astro-expressive-code@0.43.1:
     resolution: {integrity: sha512-xddgwQxFRwpnnAnU7kSfrO82SsOAq7sQrYpXxVcrN9k/0aqNlTH2+mLrOMm1wXm6jdFKepst3hd8/qWojwuunw==}
@@ -4261,7 +4261,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro-contributors@0.8.0(astro@6.4.8(@types/node@26.1.2)(jiti@2.7.0)(lightningcss@1.33.0)(rollup@4.60.4)(supports-color@10.2.2)(terser@5.49.2)(yaml@2.9.1)):
+  astro-contributors@0.10.0(astro@6.4.8(@types/node@26.1.2)(jiti@2.7.0)(lightningcss@1.33.0)(rollup@4.60.4)(supports-color@10.2.2)(terser@5.49.2)(yaml@2.9.1)):
     dependencies:
       astro: 6.4.8(@types/node@26.1.2)(jiti@2.7.0)(lightningcss@1.33.0)(rollup@4.60.4)(supports-color@10.2.2)(terser@5.49.2)(yaml@2.9.1)
 
